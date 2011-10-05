@@ -54,6 +54,9 @@ public class s97113117_Hw1 {
 
 		DistortionMeasure dm = new DistortionMeasure(xn, yn, N);
 
+		// 取至小數末兩位
+		DecimalFormat df = new DecimalFormat("#.##");
+
 		double MSE = dm.getMSE();	// Mean Square Error
 		double SNR = dm.getSNR();	// Signal to Noise Ratio
 		double PSNR = dm.getPSNR(9);	// Peak Singal to Noise Ratio
