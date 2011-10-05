@@ -60,5 +60,7 @@ public class s97113117_Hw1 {
 		double MSE = dm.getMSE();	// Mean Square Error
 		double SNR = dm.getSNR();	// Signal to Noise Ratio
 		double PSNR = dm.getPSNR(9);	// Peak Singal to Noise Ratio
+
+		System.out.println("MSE = " + df.format(MSE) + ", SNR = " + df.format(SNR) + "dB, PSNR = " + df.format(PSNR) + "dB");
 	}
 }
