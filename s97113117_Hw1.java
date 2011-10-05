@@ -15,6 +15,15 @@ class DistortionMeasure {
 		this.yn = yn;
 		this.N = N;
 	}
+
+	public double getMSE() {
+		double sum = 0.0;
+		for (int i = 0; i < N; i++) {
+			sum += pow((xn[i] - yn[i]), 2);
+		}
+
+		return sum / N;
+	}
 }
 
 public class s97113117_Hw1 {
@@ -26,5 +35,7 @@ public class s97113117_Hw1 {
 		int peak = 9;
 
 		DistortionMeasure dm = new DistortionMeasure(xn, yn, N);
+
+		double MSE = dm.getMSE();	// Mean Square Error
 	}
 }
