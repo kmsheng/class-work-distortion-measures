@@ -24,6 +24,19 @@ class DistortionMeasure {
 
 		return sum / N;
 	}
+
+	public double getSNR() {
+		double ASV = 0.0;	// Average Square Value
+		double MSE = getMSE();
+
+		for (int i = 0; i < N; i++) {
+			ASV += pow(xn[i], 2);
+		}
+		ASV /= N;
+		ASV /= MSE;
+
+		return 10 * log10(ASV);
+	}
 }
 
 public class s97113117_Hw1 {
@@ -37,5 +50,6 @@ public class s97113117_Hw1 {
 		DistortionMeasure dm = new DistortionMeasure(xn, yn, N);
 
 		double MSE = dm.getMSE();	// Mean Square Error
+		double SNR = dm.getSNR();	// Signal to Noise Ratio
 	}
 }
