@@ -37,6 +37,11 @@ class DistortionMeasure {
 
 		return 10 * log10(ASV);
 	}
+
+	public double getPSNR(int peak) {
+		double MSE = getMSE();
+		return 10 * log10(pow(peak, 2) / MSE);
+	}
 }
 
 public class s97113117_Hw1 {
@@ -51,5 +56,6 @@ public class s97113117_Hw1 {
 
 		double MSE = dm.getMSE();	// Mean Square Error
 		double SNR = dm.getSNR();	// Signal to Noise Ratio
+		double PSNR = dm.getPSNR(9);	// Peak Singal to Noise Ratio
 	}
 }
