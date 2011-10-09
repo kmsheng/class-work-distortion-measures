@@ -25,7 +25,7 @@ class TransformCoding {
 			}
 			// 保留小數後四位
 			dct[u] = round(dct[u] * 10000) / 10000.0;
-			// 判斷C(u)
+			// 判斷 C(u)
 			cu = (0 == u) ? 0.35355339059 : 0.5;
 			dct[u] *= cu;
 		}
@@ -44,7 +44,7 @@ class TransformCoding {
 
 public class s97113117_Hw1a {
 	public static void main(String[] args) {
-		// 範例
+		// 範例的輸入資料
 		// int[] fi = {8, 7, 6, 5, 4, 3, 2, 1};
 		int[] fi = {9, 7, 1, 1, 3, 1, 1, 7};
 		TransformCoding tc = new TransformCoding(fi);
