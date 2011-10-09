@@ -51,8 +51,8 @@ public class s97113117_Hw1a {
 		// 範例的輸入資料
 		// int[] fi = {8, 7, 6, 5, 4, 3, 2, 1};
 		int[] fi = {9, 7, 1, 1, 3, 1, 1, 7};
-		TransformCoding tc = new TransformCoding(fi);
 
+		TransformCoding tc = new TransformCoding(fi);
 		double[] dct = tc.get1DDCT();
 		String result = tc.getStringResult(dct);
 
