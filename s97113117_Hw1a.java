@@ -31,6 +31,15 @@ class TransformCoding {
 		}
 		return dct;
 	}
+
+	public void show(double[] dct) {
+		// 取至小數末四位
+		DecimalFormat df = new DecimalFormat("#.####");
+
+		for (double i : dct) {
+			out.println(df.format(i));
+		}
+	}
 }
 
 public class s97113117_Hw1a {
@@ -41,5 +50,6 @@ public class s97113117_Hw1a {
 		TransformCoding tc = new TransformCoding(fi);
 
 		double[] dct = tc.get1DDCT();
+		tc.show(dct);
 	}
 }
