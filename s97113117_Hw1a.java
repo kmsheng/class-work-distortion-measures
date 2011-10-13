@@ -56,6 +56,6 @@ public class s97113117_Hw1a {
 		double[] dct = tc.get1DDCT();
 		String result = tc.getStringResult(dct);
 
-		out.println(result);
+		out.println("result = " + result);
 	}
 }
